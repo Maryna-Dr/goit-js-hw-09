@@ -16,8 +16,7 @@ function onSubmit(e) {
 }
 
 function callPromise(firstDelayValue, stepValue, numberValue) {
-  for (i = 0; i < numberValue; i += 1) {
-    console.log(i);
+  for (let i = 0; i < numberValue; i += 1) {
     createPromise(i + 1, firstDelayValue + stepValue * i)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
